@@ -10,7 +10,7 @@ pipeline {
             steps {
                 withAWS(region:'us-east-2',credentials:'aws-static') {
 		    bat 'echo "Hello World with AWS creds"'
-                    s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'adeza-static-jenkins-pipeline')
+                    s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'shjunmiao-static-jenkins-pipeline')
                 }
             }
         }
