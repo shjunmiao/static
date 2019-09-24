@@ -8,7 +8,7 @@ pipeline {
         }
         stage('Upload to AWS') {
             steps {
-                withAWS(region:'us-east-2',credentials:'aws-static') {
+                withAWS(region:'eu-west-1',credentials:'aws-static') {
 		    bat 'echo "Hello World with AWS creds"'
                     s3Upload(pathStyleAccessEnabled: true, payloadSigningEnabled: true, file:'index.html', bucket:'shjunmiao-static-jenkins-pipeline')
                 }
